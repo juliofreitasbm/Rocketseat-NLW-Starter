@@ -1,0 +1,100 @@
+			CURSO STARTER DIA 1
+
+DICAS DE CSS
+	display: flex //coloca os elementos um ao lado do outro
+	align-items: center //alinha os elementos ao centro (verticalmente)
+	justify-content: space-between //separa todos os elementos por uma distância igual (horizontalmente)
+	width: 90% //ocupa 90% da página independente do tamanho. É diferente de colocar em pixels, por exemplo, que é um valor fixo
+	max-width: 1100px //limita o tamanho máximo da largura
+	line-height: 38px; //muda a distância entre as linhas do texto de uma mesma tag. Bom para usar na tag <p>
+	border-radius: 8px; //Arredonda as bordas. Excelente para fazer botões. Funciona semelhante ao margin, mas começando pelo canto superior esquerdo.
+	border-top-left-radius: 8px; //Forma de referenciar o border radius pra só um dos cantos.
+	transition: 400ms; //Deixa o "hover" mais suave. Deve ser colocado no css da tag mesmo. Não colocar onde está o :hover.
+	transform: translateX(-50%); //Muda o ponto de referência do objeto. Nessa caso tira do canto e muda para o centro.
+
+FAZENDO TESTES EM CSS
+	No DevTools do navegador você pode selecionar o elemento que quer testar na aba Elements. No submenu terá a aba Styles e dentro dele terá element.style{}. Aqui dentro você pode colcoar opções de css e ir testando sem alterar o seu código, basta recarregar a página pra ficar como era antes.
+
+DICAS DE MARGIN
+	margin: auto; //Com 1 valor a margin é aplicada a bottom/top/left/right
+	margin: 0px auto; //Com 2 valores o primeiro é aplicado ao bottom/top e o segundo ao left/right
+	margin: 50px auto 0; //Com 3 valores a margin é aplicada ao top, left/right e bottom
+	margin: 50px auto 20px 15px //Com 4 valores a margin é aplicada na sequência top, right, bottom, left
+
+REGRAS FORA DA CAIXA
+	BLOCK/INLINE
+
+REGRAS DENTRO DA CAIXA
+	FLEX/GRID
+
+BOX MODEL
+	BLOCK: div/h1/p
+	INLINE: a/span/strong
+
+DICA DE USABILIDADE/ EMMET-ABREVIATION
+	#nome_do_id + Press ENTER //Cria uma div com id nome_do_id
+	.nome_da_class + Press ENTER //Cria uma div com a classe nome_da_class
+	img + Press ENTER //Cria uma tag img com src="" e alt=""
+	Ao deixar a barra de digitação no final de uma linha e apertar Control C o VS code copia a linha inteira (sem precisar selecioná-la)
+	t + a + Press Enter //Digita text-align:; no CSS
+
+DICA BACKGROUND
+	background: url('FILE LOCATION') no-repeat; //Por padrão o CSS tende a repetir a imagem de background
+	height: 100vh; //vh significa viewport height. É uma medida dinâmica que nem a porcentagem (diferente de pixels que é menidade estática). Significa que ele vai pegar 100% da altura da página.
+	background-position: 35vw; //vw é viewport width. Funciona semelhante ao vh
+
+DICA img
+	O atributo "alt" na tag img é uma alternativa à imagem. Caso ele não encontre a imagem que queremos pode apresentar um texto. Ele também serve para promover acessibilidade, se algum deficiente visual está navegando pelo site o que está no botão alt será dito no lugar.
+
+ORGANIZAÇÃO DO CSS
+	Colocar as edições de forma hierarquica: no topo do arquivo os estilos das tags principais (html, body, a, ...), Colocar o estilo das tags filhas sempre abaixo das tags pai
+	Quando o nome da fonte só tiver 1 palavra não precisa colocá-lo entre aspas simples.
+
+O que é a tag main?
+	É uma forma de dizer que aquela será a parte principal do documento HTML
+
+O que é o :root {}?
+	Através dele você pode referenciar a raiz do documento HTML e criar variáveis pra atribuir cores, por exemplo.
+	Exemplo:
+	:root {
+		--title-color: #322153;
+	}
+	Para aplicar a cor em algum estilo deve-se usar var(--title-color)
+
+0 que é o * {}?
+	É uma forma de mexer no style de todos os elementos de uma vez só. É um bom atalho para zerar margin e padding
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+DICA DE OTIMIZAÇÃO
+	Não use vários <link> para importar as fontes do google fonts. Use apenas um link para não fazer várias requisições.
+
+Dica de Flex
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	// O flex possui vários parâmetros que podem ser usados para deixar a aplicação mais responsiva
+
+Dica de webkit
+	//esse webkit deixa a fonte um pouco mais gostosa de se ver
+	body {
+		background: #f0f0f5;
+		-webkit-font-smoothing: antialiased;
+	}
+
+ADICIONANDO ELEMENTOS NO HTML ATRAVÉS O CSS (DENTRO DO SPAN)
+	#page-home main a span::after {
+		content: "";
+		background-image: url('../assets/search.svg');
+
+		width: 20px;
+		height: 20px;
+	}
+	// usando o ::after é possível adicionar um ícone dentro do CSS, por exemplo
+
+O que é @media?
+	Conjunto de regras pra melhorar a dinamicidade do conteúdo. Para aplicar essa propriedade é importante que o documento tenha o meta:
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
