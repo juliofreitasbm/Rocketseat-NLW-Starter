@@ -98,3 +98,55 @@ ADICIONANDO ELEMENTOS NO HTML ATRAVÉS O CSS (DENTRO DO SPAN)
 O que é @media?
 	Conjunto de regras pra melhorar a dinamicidade do conteúdo. Para aplicar essa propriedade é importante que o documento tenha o meta:
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+			CURSO STARTER DIA 2
+
+REFATORAÇÃO DE CÓDIGO (DO CSS)
+	Colocar o código @media (de responsividade) dentro de um arquivo responsive.css
+	Colocar todo o código referente ao home (#page-home) dentro de um arquivo home.css
+	Adicionar os links para os documentos dentro do index.html lembrando de deixar o responsive.css por último
+
+RESPONSIVIDADE NO DevTools (Media Queries)
+	Apertar F12 para abrir o DevTools
+	Clicar na opção Toggle Device Toolbar (Control + Shift + M)
+	Você pode redimensionar para vários tamanhos de tela e conferir a responsividade utilizando a barra de mover na lateral direita e na parte inferior
+	Também pode rotacionar a tela para ver como fica em Tablets e Celulares
+
+ALTERANDO ARQUIVOS DE IMAGEM .svg
+	Essa estensão de arquivo é salva dentro de uma tag html <svg>
+	Alterando parâmetro stroke="" pode-se mudar a cor
+
+DICA DE BOX NO CSS
+	form {
+		background-color: white;
+
+		margin-top: 80px;
+		padding: 64px;
+
+		border-radius: 8px;
+
+		max-width: 730px;
+
+		box-sizing: border-box;
+	}
+	//Ao utilizar o box-sizing você informa o CSS de que o tamanho da caixa vai até a borda (border). O que significa que o padding não vai mais esticá-la.
+
+ALINHAMENTO DE CAIXA (pelo lado de fora)
+	margin: 0 auto;
+
+DICAS DE FORMULÁRIO CSS
+	flex: 1; //Faz o elemento preencher todo o espaço horizontalmente
+	outline: none; //Tira a borda que aparece quando clica no campo do formulário. Lembre-se: É importante que o usuário tenha algum feedback visual de qual campo está selecionado
+	appearance: none; -webkit-appearance: none; -moz-appearance: none; //Tirar setinha e fortamatação do <select>
+
+	form .field-group .field + .field {
+		margin-left: 24px;
+	}
+	//Ao utilizar a formatação acima o CSS entende que é pra aplicar as alterações num elemento field que está depois de outro elemento field. (obs: ele aplica as alterações no elemento que está depois do +)
+
+	tansition: background-color 400ms; //Cria um atraso de transição apenas para a cor do background. Caso contrário, o atraso de transição afetaria todos os outros elementos do botão.
+
+APRENDENDO JAVASCRIPT
+	www.codepen.io
+	IBGE SERVIÇOS API: https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-UFs-estadosGet
+	fetch().then é uma forma de fazer promessa em JS.
