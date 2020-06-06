@@ -150,3 +150,53 @@ APRENDENDO JAVASCRIPT
 	www.codepen.io
 	IBGE SERVIÇOS API: https://servicodados.ibge.gov.br/api/docs/localidades?versao=1#api-UFs-estadosGet
 	fetch().then é uma forma de fazer promessa em JS.
+
+
+			CURSO STARTER DIA 3
+
+DATA-id
+	Também existe o atributo data-name
+	É útil para a parte do Javascript
+
+DISPLAY: GRID;
+	Com o display GRID você pode criar colunas pra apresentar uma lista. Ideal para galerias de fotos.
+	grid-template-columns: 1fr 1fr 1fr; //o fr representa frações e é uma forma do grid ajustar os espaços automaticamente
+	gap: 16px; //Forma de definir margin dentro do grid (ele ajusta o afastamento entre os elementos, mas desconsidera nas bordas)
+
+ADICIONAR OU REMOVER CLASSES EM JS
+	// adicionar ou remover uma classe com javascript: add, remove, toggle
+	itemLi.classList.toggle("selected");
+
+INPUT type="hidden"
+	Muito útil para capturar as seleções que o usuário fez em tela e acrescentar na URL para enviar para o backend
+
+MODAL
+	//Adicionando mais 2 caracteres no RGB nós conseguimos fazer um alfa (transparência)
+	//O height e o width em 100vw fazem o modal ocupar a tela toda, mas ele ainda não está posicionado da forma correta
+	//O position fixed e o top: 0; fazem o modal se mover pra cima e cobrir a tela toda
+	#modal {
+		background-color: #0E0A14ef;
+
+		height: 100vh;
+		width: 100vw;
+
+		position: fixed;
+		top: 0;
+	}
+
+CLASSES NO HTML
+	Quando você separa o nome da classe por espaço você na verdade está criando duas classes. A segunda está dentro da primeira.
+	Para criar uma div assim você digita .classe1.clase2 e pressiona ENTER
+
+PARÂMETRO href=""
+	Se deixá-lo vazio ao clicar no botão você irá recarregar a página
+	Para evitar o recarregamento da página utilize href="#"
+
+BANCO DE IMAGENS
+	https://unsplash.com/
+
+O que diabos é Z-INDEX?
+	z-index é referente ao eixo z, ou seja, ele serve para identificar quais elementos estão a frente de outros.
+
+Dica CSS
+	object-fit: cover; //serve para uma imagem preencher o espaço ao invés de ser esticada
