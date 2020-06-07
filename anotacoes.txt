@@ -200,3 +200,39 @@ O que diabos é Z-INDEX?
 
 Dica CSS
 	object-fit: cover; //serve para uma imagem preencher o espaço ao invés de ser esticada
+
+
+			CURSO STARTER DIA 4
+
+INICIANDO SERVIDOR
+	npm init -y //Isso cria o arquivo package.json
+
+INSTALANDO EXPRESS
+	npm install express
+
+PACKAGE.json
+	pra usar os scripts faça "npm nome_do_script" no terminal
+	"start": "node src/server.js" //script
+
+INICIAR UM SERVIDOR SÓ PRECISA DE 3 linhas
+	const express = require("express");
+	const server = express();
+	server.listen(3000);
+
+INSTALANDO NODEMON
+	npm install nodemon -D //Serve para reiniciar o server toda vez que fizermos alterações
+	"start": "nodemon src/server.js" //Novo script
+
+INSTALANDO TEMPLATE ENGINE (tornar o html dinâmico)
+	npm install nunjucks
+
+INSTALANDO NUNJUCKS-TEMPLATE NAS EXTENSÕES DO VSCODE
+	só pra deixar o código colorido
+
+OBS: ESSE PROJETO É UM SISTEMA FULL MVC
+	é um sistema que envolve frontend e backend na mesma aplicação
+
+			CURSO STARTER DIA 5
+
+INSTALANDO SQLIT3
+	npm install sqlite3
